@@ -42,11 +42,11 @@ $("#btnGenerar").click(function(){
 
 	}
 
-
++
 	// //fase 2
 
 	html+='<div style="text-align: center;">';
-	html+='<b><u> D E C L A R A C I O N E S :<b><u>';
+	html+='<b><u> D E C L A R A C I O N E S :</b></u>';
 	html+='</div>';
 
 
@@ -55,7 +55,7 @@ $("#btnGenerar").click(function(){
 
 		html+= '<p><b>I. Declara "EL COMITENTE", por su propio derecho y bajo protesta de decir verdad:</b></p>';
 	
-		html+= '<p>A) Ser una persona física, de nacionalidad ';
+		html+= '<p> A) Ser una persona física, de nacionalidad';
 
 
 	
@@ -72,11 +72,11 @@ $("#btnGenerar").click(function(){
 	html+='mayor de edad, que es su voluntad y cuenta con las capacidades legales y suficientes para sujetarse a las condiciones del presente Contrato.'	
 	html+='</p>'
 
-	html+='<p>B) Que se identifica con: ';
+	html+='<p> B) Que se identifica con: ';
 	html+=$('input:radio[name=F2_2]:checked').val();
 	html+=' documento que se anexa en copia simple al presente Contrato.</p>'
 
-	html+='hola ';
+	html+='hola';
 
 	// html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en ' 
 	// html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
@@ -108,7 +108,7 @@ $("#btnGenerar").click(function(){
 
 	//Inciso  fase 2
 	if($('input:radio[name=F2_6]:checked').val() == 'a'){
-		html+='<p>D) ';
+		html+='<p> D) ';
 		html+='Que se encuentra Inscrito en el Registro Federal de Contribuyentes bajo la clave: ';
 		html+=($("#F2_7R1").val()).toUpperCase();
 		html+='</p>';
@@ -168,6 +168,7 @@ $("#btnGenerar").click(function(){
 			html+='<td align="center">'+moment($("#F2_18R1").val()).lang("es").format('LL')+'</td>';
 
  		}else{
+
  			html+=' A) Ser una Sociedad Mercantil, debidamente constituida conforme a las disposiciones de la legislación mexicana, la cual se encuentra inscrita en el Registro Público del Comercio. ';
 
  	}
@@ -230,7 +231,7 @@ $("#btnGenerar").click(function(){
 	html+='C.P. '+($("#F2_25R5").val())+', '; //cp
 	
 	html+=$("#F2_25R6").val()+', '; //ciudad
-	 html+=$("#F2_25R7").val(); //estado
+	html+=$("#F2_25R7").val(); //estado
 	html+=$("#F2_25R8").val()+', '; //pais 
 
 
@@ -292,7 +293,7 @@ $("#btnGenerar").click(function(){
 
 	if ($('input:radio[name=F3_1]:checked').val() == 'a') {
 
-		html+= ' mexicana ';
+		html+= 'mexicana';
 
 
 	}else{
@@ -343,6 +344,7 @@ $("#btnGenerar").click(function(){
 
 
 	}
+
 	}
 
 
@@ -546,6 +548,7 @@ html='<p>'
 		html+='. ';
 
 	}
+
 
 	html+='</p>'
 
@@ -1105,6 +1108,7 @@ if ($('input:radio[name=F5_1]:checked').val()=='a') {
 		html2+=' ni entre una Parte y los empleados, agentes, apoderados, comisionistas o subcontratistas de la otra Parte, cada una de ';
 		html2+='<b>';
 		html2+=' "LAS PARTES", ';
+		html2+='</b>';
 		html2+=' como patrón del personal que ocupe con motivo de la celebración del presente Contrato, será la única responsable de las obligaciones derivadas de las disposiciones legales y demás ordenamientos aplicables en materia de trabajo y seguridad social respecto de dicho personal, por lo que estas acuerdan que no tendrán ninguna responsabilidad de carácter civil, mercantil, laboral, fiscal o de cualquier otra índole respecto de los trabajadores, agentes, apoderados, comisionistas o subcontratistas de dicha parte. ';
 
 		html2+='</p>';
