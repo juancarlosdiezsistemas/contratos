@@ -1,5 +1,5 @@
 
-function contrato_Comision(){
+function contrato_ComisionPro(){
 
 
 
@@ -76,29 +76,29 @@ $("#btnGenerar").click(function(){
 	html+=$('input:radio[name=F2_2]:checked').val();
 	html+=' documento que se anexa en copia simple al presente Contrato.</p>'
 
-	html+='hola';
 
-	// html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en ' 
-	// html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
-	// html+='número exterior '+($("#F2_3R2").val()).toLowerCase()+', '; //numero ext
 
-	// if ($("#F2_3R3").val() !='') {
-	// 		html+='número interior '+($("#F2_3R3").val()).toLowerCase()+', '; //numero int
-	// }
+	 html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en ' 
+	 html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
+	 html+='número exterior '+($("#F2_3R2").val()).toLowerCase()+', '; //numero ext
 
-	// html+='colonia '+($("#F2_3R4").val()).charAt(0).toUpperCase()+($("#F2_3R4").val()).slice(1)+', '; //colonia
-	// html+='C.P. '+($("#F2_3R5").val())+', '; //cp
-	// html+=$("#F2_3R6").val()+', '; //ciudad
-	// html+=$("#F2_3R7").val();
+	 if ($("#F2_3R3").val() !='') {
+	 		html+='número interior '+($("#F2_3R3").val()).toLowerCase()+', '; //numero int
+	 }
 
-	// if($('input:radio[name=F2_4]:checked').val() == 'a'){
-	// 	html+='. Así como la siguiente dirección de correo electrónico ';
-	// 	html+= $("#F2_5R1").val()
-	// }
+	 html+='colonia '+($("#F2_3R4").val()).charAt(0).toUpperCase()+($("#F2_3R4").val()).slice(1)+', '; //colonia
+	 html+='C.P. '+($("#F2_3R5").val())+', '; //cp
+	 html+=$("#F2_3R6").val()+', '; //ciudad
+	 html+=$("#F2_3R7").val();
+
+	 if($('input:radio[name=F2_4]:checked').val() == 'a'){
+	 	html+='. Así como la siguiente dirección de correo electrónico ';
+	 	html+= $("#F2_5R1").val()
+	 }
 
 	}
 
-	// html+='</p>';
+	 html+='</p>';
 
 	//fin inciso c
 
@@ -165,7 +165,7 @@ $("#btnGenerar").click(function(){
 
 			html+=($("#F2_17R1").val()).toLowerCase();
 			html+=' de fecha ';
-			html+='<td align="center">'+moment($("#F2_18R1").val()).lang("es").format('LL')+'</td>';
+			html+=moment($("#F2_18R1").val()).lang("es").format('LL');
 
  		}else{
 
@@ -199,7 +199,7 @@ $("#btnGenerar").click(function(){
 	html+=$("#F2_23R3").val()+', '; //pais 
  	
  	html+=' Que se identifica con: ';
-  	html+=($("#F2_24").val());
+  	html+=$('input:radio[name=F2_24]:checked').val()
 	html+=', ';
 	html+=' documento que se anexa en copia simple al presente Contrato. ';
 
@@ -207,7 +207,7 @@ $("#btnGenerar").click(function(){
  	}else{
 
  		html+=' B) Que su apoderado legal cuenta con las facultades suficientes para obligarse en los términos del presente Contrato, las cuales no le han sido revocadas, modificadas ni limitadas, de forma alguna, en todo o en parte. Que se identifica con: ';
-		html+=($("#F2_24").val());
+		html+=$('input:radio[name=F2_24]:checked').val()
 		html+=' documento que se anexa en copia simple al presente Contrato. ';
 
  	}
@@ -217,9 +217,7 @@ $("#btnGenerar").click(function(){
  	html+='<p>';
 
  	html+= ' C) Que señala como domicilio para efectos del presente Contrato el ubicado en ';
-  	html+=($("#F2_24").val());
-
-
+  	
 	html+='calle '+($("#F2_25R1").val()).charAt(0).toUpperCase()+($("#F2_25R1").val()).slice(1)+', '; //calle
 	html+='número exterior '+($("#F2_25R2").val()).toLowerCase()+', '; //numero ext
 
@@ -247,23 +245,24 @@ $("#btnGenerar").click(function(){
 
 	if ($('input:radio[name=F2_28]:checked').val() == 'a') {
 		
-		html+= ' D) Que se encuentra inscrito en el Registro Federal de Contribuyentes bajo la Clave: ';
+		html+='D) Que se encuentra inscrito en el Registro Federal de Contribuyentes bajo la Clave: ';
  		html+=($("#F2_29R1").val()).toLowerCase();
 
 	}
 
+	html+='</p>'
 
-	html+='<p';
-	html+= ' E) Que es su deseo obligarse en los términos y condiciones del presente Contrato, manifestando que cuenta con la capacidad legal para la celebración de este Contrato. ';
-	html+='</p';
+	html+='<p>';
+	html+= 'E) Que es su deseo obligarse en los términos y condiciones del presente Contrato, manifestando que cuenta con la capacidad legal para la celebración de este Contrato. ';
+	html+='</p>';
 
 
 
-	html+='<p';
+	html+='<p>';
 
 	html+= ' F) Que los recursos económicos que destinará para dar cumplimiento al presente Contrato son de procedencia lícita, en cumplimiento con lo establecido por la Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita. ';
 
-	html+='</p';
+	html+='</p>';
 
 
 // //fin seccion 2
@@ -280,9 +279,9 @@ $("#btnGenerar").click(function(){
 	if ($('input:radio[name=F1_5]:checked').val() == 'a') {
 
 	html+='<p>'
-	html+='b'
+	html+='<b>'
 	html+= 'II. Declara “EL COMISIONISTA”, por su propio derecho y bajo protesta de decir verdad: ';
-	html+='/b'
+	html+='</b>'
 	html+='</p>'
 
 	
@@ -305,7 +304,7 @@ $("#btnGenerar").click(function(){
 
 	html+='<p>'
 	html+= ' B) Que se identifica con: ';
-	html+=($("#F3_2").val()).toLowerCase();
+	html+=$('input:radio[name=F3_2]:checked').val().toLowerCase();
 	html+= ' documento que se anexa en copia simple al presente Contrato. ';
 	html+='</p>'
 
@@ -313,8 +312,7 @@ $("#btnGenerar").click(function(){
 
 	html+='<p>'
 	html+= ' C) Que señala como domicilio para efectos del presente Contrato el ubicado en ';
-	html+=($("#F3_2").val()).toLowerCase();
-
+	
 
 
 	html+='calle '+($("#F3_3R1").val()).charAt(0).toUpperCase()+($("#F3_3R1").val()).slice(1)+', '; //calle
@@ -323,8 +321,9 @@ $("#btnGenerar").click(function(){
 	if($("#F2_25R3").val() !='') {
 	html+='número interior '+($("#F3_3R3").val()).toLowerCase()+', '; //numero int
 	}
+
 	html+='colonia '+($("#F3_3R4").val()).charAt(0).toUpperCase()+($("#F3_3R4").val()).slice(1)+', '; //colonia
-	html+='C.P. '+($("#F3_3R5").val())+', '; //cp
+	html+='C.P'+($("#F3_3R5").val())+' '; //cp
 	
 	html+=$("#F3_3R6").val()+', '; //ciudad
 	html+=$("#F3_3R7").val(); //estado
@@ -489,7 +488,7 @@ if ($('input:radio[name=F3_19]:checked').val()=='a') {
 
 	html+= ' Que se identifica con: ';
 
-	html+=($("#F3_24").val())
+	html+=$('input:radio[name=F3_24]:checked').val()
 	html+=', ';
 	html+= ' documento que se anexa en copia simple al presente Contrato. ';
 
@@ -504,9 +503,9 @@ if ($('input:radio[name=F3_19]:checked').val()=='a') {
 
 }
 
-html='</p>'
+html+='</p>'
 
-html='<p>'
+html+='<p>'
 
 
 	html+=' C) Que señala como domicilio para efectos del presente Contrato el ubicado en';
@@ -556,6 +555,8 @@ html='<p>'
 
 	html+='  E) Que es su deseo obligarse en los términos y condiciones del presente Contrato, manifestando que cuenta con la capacidad legal para la celebración de este Contrato.';
 
+	html+='<br>'
+
 	html+=' F) Que los recursos económicos que destinará para dar cumplimiento al presente Contrato son de procedencia lícita, en cumplimiento con lo establecido por la Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita. ';
 
 	html+='</p>'	
@@ -566,7 +567,7 @@ html='<p>'
 
 
 	html+='<div style="text-align: center;">';
-	html+='<b><u> C L A U S U L A S :  :<b><u>';
+	html+='<b><u> C L A U S U L A S : <b><u>';
 	html+='</div>';
 
 
@@ -644,7 +645,7 @@ html='<p>'
 
 	if ($('input:radio[name=F5_1]:checked').val()=='b') {
 	html+=' el ';
-	html+=($("#F2_5").val()).toLowerCase();
+	html+=$('input:radio[name=F5_2]:checked').val().toLowerCase();
 
 	}
 
@@ -1171,6 +1172,7 @@ if ($('input:radio[name=F5_1]:checked').val()=='a') {
 		html2+=' De común acuerdo ';
 		html2+='<b>';
 		html2+=' "LAS PARTES" ';
+		html2+='</b>';
 		html2+=' establecen que ambas partes, podrán transferir, ceder o delegar en todo o en parte los derechos u obligaciones que deriven del presente Contrato en favor de terceros, para lo cual bastará con dar aviso por escrito a la contraparte con una antelación de ';
 		html2+=$("#F13_2R1").val();
 		html2+=' días naturales. ';
