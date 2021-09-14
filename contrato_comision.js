@@ -13,8 +13,7 @@ $("#btnGenerar").click(function(){
 	if(($('input:radio[name=F1_1]:checked').val())== 'a'){	
 		html+=(' '+$("#F1_2R1").val()+' '+$("#F1_2R2").val()+',').toUpperCase();
 		html+= 'POR SU PROPIO DERECHO,';
-	}
-	else{
+	}else{
 		
 		html+=(''+$("F1_3R1").val()+',').toUpperCase();
 		html+= 'REPRESENTADA EN ESTE ACTO POR,';
@@ -31,8 +30,7 @@ $("#btnGenerar").click(function(){
 	if(($('input:radio[name=F1_1]:checked').val())== 'a'){	
 		html+=(' '+$("#F1_6R1").val()+' '+$("#F1_6R2").val()+',').toUpperCase();
 		html+= 'POR SU PROPIO DERECHO,';
-	}
-	else{
+	}else{
 		
 		html+=(''+$("F1_7R1").val()+',');
 		html+= 'REPRESENTADA EN ESTE ACTO POR,';
@@ -63,9 +61,11 @@ $("#btnGenerar").click(function(){
 		html+= 'mexicana,';
 
 	}else{
+
 		html+=($("F2_1R1").val()+',').toLowerCase();
 
 	}
+
 	html+='mayor de edad, que es su voluntad y cuenta con las capacidades legales y suficientes para sujetarse a las condiciones del presente Contrato.'	
 	html+='</p>'
 
@@ -73,26 +73,33 @@ $("#btnGenerar").click(function(){
 	html+=$('input:radio[name=F2_2]:checked').val();
 	html+=' documento que se anexa en copia simple al presente Contrato.</p>'
 
-	html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en'
-	html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	}
+	html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en' ' '
+	html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
 	html+='número exterior '+($("#F2_3R2").val()).toLowerCase()+', '; //numero ext
+
 	if ($("#F2_3R3").val() !='') {
 			html+='número interior '+($("#F2_3R3").val()).toLowerCase()+', '; //numero int
 	}
+
 	html+='colonia '+($("#F2_3R4").val()).charAt(0).toUpperCase()+($("#F2_3R4").val()).slice(1)+', '; //colonia
 	html+='C.P. '+($("#F2_3R5").val())+', '; //cp
 	html+=$("#F2_3R6").val()+', '; //ciudad
 	html+=$("#F2_3R7").val();
+
 	if($('input:radio[name=F2_4]:checked').val() == 'a'){
 		html+='. Así como la siguiente dirección de correo electrónico ';
 		html+= $("#F2_5R1").val()
 	}
 
+	}
+
+	html+='</p>';
 
 	//fin inciso c
 
-	html+='</p>';
+
 	
+
 
 	//Inciso  fase 2
 	if($('input:radio[name=F2_6]:checked').val() == 'a'){
@@ -107,12 +114,7 @@ $("#btnGenerar").click(function(){
 	html+='E) Que los recursos económicos que destinará para dar cumplimiento al presente Contrato son de procedencia lícita, en cumplimiento con lo establecido por la Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita.';
 
 	html+='</p>';
- }
-
- 	html+='<p>';
-
-
-
+ 
 
  	html+='<p>';
  	
@@ -160,21 +162,14 @@ $("#btnGenerar").click(function(){
 			html+=' de fecha ';
 			html+='<td align="center">'+moment($("#F2_18R1").val()).lang("es").format('LL')+'</td>';
 
-
- 		}
-
-
-
-
- 	}else{
- 		html+=' A) Ser una Sociedad Mercantil, debidamente constituida conforme a las disposiciones de la legislación mexicana, la cual se encuentra inscrita en el Registro Público del Comercio. ';
+ 		}else{
+ 			html+=' A) Ser una Sociedad Mercantil, debidamente constituida conforme a las disposiciones de la legislación mexicana, la cual se encuentra inscrita en el Registro Público del Comercio. ';
 
  	}
 
-
+ 	}
 
  	html+='</p>';
-
 
 
  	html+='<p>';
@@ -225,6 +220,7 @@ $("#btnGenerar").click(function(){
 	if($("#F2_25R3").val() !='') {
 	html+='número interior '+($("#F2_25R3").val()).toLowerCase()+', '; //numero int
 	}
+
 	html+='colonia '+($("#F2_25R4").val()).charAt(0).toUpperCase()+($("#F2_25R4").val()).slice(1)+', '; //colonia
 	html+='C.P. '+($("#F2_25R5").val())+', '; //cp
 	
