@@ -7,6 +7,7 @@ console.log('contrato');
 
 
 $("#btnGenerar").click(function(){
+
 	var html='';
 	html+='<p><b>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p>';
 
@@ -95,7 +96,7 @@ $("#btnGenerar").click(function(){
 	// 	html+= $("#F2_5R1").val()
 	// }
 
-	// }
+	}
 
 	// html+='</p>';
 
@@ -1536,6 +1537,7 @@ if ($('input:radio[name=F5_1]:checked').val()=='a') {
 
 
 	//fin fase 20		
+
 
 
 
