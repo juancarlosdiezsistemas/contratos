@@ -307,7 +307,6 @@ $("#btnGenerar").click(function(){
 
 	html+='<p>'
 	html+= ' C) Que señala como domicilio para efectos del presente Contrato el ubicado en ';
-
 	html+=($("#F3_2").val()).toLowerCase();
 
 
@@ -721,9 +720,7 @@ html='<p>'
 	html2+=$("#F5_5R1").val();
 	html2+=' ('+NumeroALetrasDias($("#F5_5R1").val())+')';
 	html2+=' días naturales siguientes a la fecha en que se haya realizado el pago. ';
-
 	}
-
 	html2+='</p>';
 
 
