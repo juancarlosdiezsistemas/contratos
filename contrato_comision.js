@@ -75,6 +75,8 @@ $("#btnGenerar").click(function(){
 	html+=$('input:radio[name=F2_2]:checked').val();
 	html+=' documento que se anexa en copia simple al presente Contrato.</p>'
 
+html+='hola ';
+
 	html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en ' 
 	html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
 	html+='número exterior '+($("#F2_3R2").val()).toLowerCase()+', '; //numero ext
