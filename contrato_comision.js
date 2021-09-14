@@ -1,12 +1,14 @@
 
 function contrato_Comision(){
 
-var html="";
+
 
 console.log('contrato');
-html+='<p><b>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p>';
+
 
 $("#btnGenerar").click(function(){
+	var html='';
+	html+='<p><b>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p>';
 
 	//fase1
 
@@ -73,7 +75,7 @@ $("#btnGenerar").click(function(){
 	html+=$('input:radio[name=F2_2]:checked').val();
 	html+=' documento que se anexa en copia simple al presente Contrato.</p>'
 
-	html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en' ' '
+	html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en ' 
 	html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
 	html+='número exterior '+($("#F2_3R2").val()).toLowerCase()+', '; //numero ext
 
