@@ -75,29 +75,29 @@ $("#btnGenerar").click(function(){
 	html+=$('input:radio[name=F2_2]:checked').val();
 	html+=' documento que se anexa en copia simple al presente Contrato.</p>'
 
-html+='hola ';
+	html+='hola ';
 
-	html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en ' 
-	html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
-	html+='número exterior '+($("#F2_3R2").val()).toLowerCase()+', '; //numero ext
+	// html+='<p>C) Que señala como domicilio para efectos del presente instrumento el ubicado en ' 
+	// html+='calle '+($("#F2_3R1").val()).charAt(0).toUpperCase()+($("#F2_3R1").val()).slice(1)+', '; //calle	
+	// html+='número exterior '+($("#F2_3R2").val()).toLowerCase()+', '; //numero ext
 
-	if ($("#F2_3R3").val() !='') {
-			html+='número interior '+($("#F2_3R3").val()).toLowerCase()+', '; //numero int
-	}
+	// if ($("#F2_3R3").val() !='') {
+	// 		html+='número interior '+($("#F2_3R3").val()).toLowerCase()+', '; //numero int
+	// }
 
-	html+='colonia '+($("#F2_3R4").val()).charAt(0).toUpperCase()+($("#F2_3R4").val()).slice(1)+', '; //colonia
-	html+='C.P. '+($("#F2_3R5").val())+', '; //cp
-	html+=$("#F2_3R6").val()+', '; //ciudad
-	html+=$("#F2_3R7").val();
+	// html+='colonia '+($("#F2_3R4").val()).charAt(0).toUpperCase()+($("#F2_3R4").val()).slice(1)+', '; //colonia
+	// html+='C.P. '+($("#F2_3R5").val())+', '; //cp
+	// html+=$("#F2_3R6").val()+', '; //ciudad
+	// html+=$("#F2_3R7").val();
 
-	if($('input:radio[name=F2_4]:checked').val() == 'a'){
-		html+='. Así como la siguiente dirección de correo electrónico ';
-		html+= $("#F2_5R1").val()
-	}
+	// if($('input:radio[name=F2_4]:checked').val() == 'a'){
+	// 	html+='. Así como la siguiente dirección de correo electrónico ';
+	// 	html+= $("#F2_5R1").val()
+	// }
 
-	}
+	// }
 
-	html+='</p>';
+	// html+='</p>';
 
 	//fin inciso c
 
