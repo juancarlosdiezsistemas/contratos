@@ -42,7 +42,7 @@ $("#btnGenerar").click(function(){
 
 	}
 
-+
+
 	// //fase 2
 
 	html+='<div style="text-align: center;">';
