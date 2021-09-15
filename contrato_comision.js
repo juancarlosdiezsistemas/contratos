@@ -6,31 +6,29 @@ function contrato_ComisionPro(){
 console.log('contrato');
 
 
-$("#btnGenerar").click(function(){
-
 	var html='';
-	html+='<b>'
-	html+='<p>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p>';
+
+	html+='<p><b>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p></b>';
 
 	//fase1
 
 	if(($('input:radio[name=F1_1]:checked').val())== 'a'){	
 		html+=(' '+$("#F1_2R1").val()+' '+$("#F1_2R2").val()+',').toUpperCase();
-		html+= 'POR SU PROPIO DERECHO,';
+		html+= '<b>POR SU PROPIO DERECHO,</b>';
 	}else{
 		
 		html+=(''+$("F1_3R1").val()+',').toUpperCase();
-		html+= 'REPRESENTADA EN ESTE ACTO POR,';
+		html+= '<b>REPRESENTADA EN ESTE ACTO POR,</b>';
 		html+=(' '+$("#F1_4R1").val()+''+$("#F1_4R2").val()+'').toUpperCase();
 
 	}
 
-	html+= 'A QUIEN EN LO SUCESIVO SE DENOMINARÁ "EL COMITENTE" Y POR LA OTRA,';
-    html+='</b>'
+	html+= '<b>A QUIEN EN LO SUCESIVO SE DENOMINARÁ "EL COMITENTE" Y POR LA OTRA,</b>';
+    html+=''
 
 	//fin fase 1 
 
-	html=+'b'
+	
 	if(($('input:radio[name=F1_1]:checked').val())== 'a'){	
 		html+=(' '+$("#F1_6R1").val()+' '+$("#F1_6R2").val()+',').toUpperCase();
 		html+= 'POR SU PROPIO DERECHO,';
@@ -41,9 +39,10 @@ $("#btnGenerar").click(function(){
 		html+=(' '+$("#F1_8R1").val()+''+$("#F1_8R2").val()+'').toUpperCase();
 		html+= 'A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ "ELCOMISIONISTA" Y A QUIENES EN CONJUNTO SE LES DENOMINARÁ "LAS PARTES" AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS.</p>';
 
+	
 	}
 
-	html=+'</b>'
+
 	// //fase 2
 
 	html+='<div style="text-align: center;">';
@@ -1558,8 +1557,6 @@ if ($('input:radio[name=F5_1]:checked').val()=='a') {
 	$('#name').prop({'value': 'Contrato Comision'});
 
   
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-})
 
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
