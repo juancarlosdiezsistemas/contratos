@@ -9,7 +9,7 @@ console.log('contrato');
 	var html='';
 	html+='<b>'
 	html+='<p>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p>';
-	html+='/b'
+	html+='</b>'
 	//fase1
 	html+='<b>'
 	if(($('input:radio[name=F1_1]:checked').val())== 'a'){	
@@ -37,10 +37,8 @@ html+='<b>'
 		html+=(''+$("F1_7R1").val()+',');
 		html+= 'REPRESENTADA EN ESTE ACTO POR,';
 		html+=(' '+$("#F1_8R1").val()+''+$("#F1_8R2").val()+'').toUpperCase();
-		html+= '<p> A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ "ELCOMISIONISTA" Y A QUIENES EN CONJUNTO SE LES DENOMINARÁ "LAS PARTES" AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS.</p>';
-
-	
 	}
+	html+= '<p> A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ "ELCOMISIONISTA" Y A QUIENES EN CONJUNTO SE LES DENOMINARÁ "LAS PARTES" AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS.</p>';
 	html+='</b>'
 	// //fase 2
 
