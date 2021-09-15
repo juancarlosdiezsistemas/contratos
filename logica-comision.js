@@ -446,23 +446,28 @@ $(document).ready(function(){
 
 	$('input:radio[name="F1_1"]').change(function(){
         if (this.checked && this.value == 'a') {
+
         	$("#F1_2").css('display','inline'); //mostrar 
         	$("#F2_1").css('display','inline'); //mostrar
         	$("#F2_2").css('display','inline'); //mostrar
         	$("#F2_3").css('display','inline'); //mostrar
+        	$("#F1_5").css('display','inline'); //mostrar
 
-        	// $("#F1_2").find('input').attr('required', true);
-        	// $("#F2_1").find('input').attr('required', true);
-        	// $("#F2_2").find('input').attr('required', true);
-        	// $("#F2_3").find('input').attr('required', true);
+        	$("#F1_2").find('input').attr('required', true);
+        	$("#F1_5").find('input').attr('required', true);
+        	$("#F2_1").find('input').attr('required', true);
+        	$("#F2_2").find('input').attr('required', true);
+        	$("#F2_3").find('input').attr('required', true);
 
+
+
+        	$("#F1_3").find('input').removeAttr('required');
+        	$("#F1_4").find('input').removeAttr('required');
 
         	$("#F1_3").css('display','none');
 			$("#F1_4").css('display','none');
 
 
-        	$("#F1_3").find('input').removeAttr('required');
-        	$("#F1_4").find('input').removeAttr('required');
 
         }else{
         	$("#F1_2").css('display','none'); //ocultar
@@ -479,9 +484,11 @@ $(document).ready(function(){
 	
         	$("#F1_3").css('display','inline'); //mostrar 
         	$("#F1_4").css('display','inline'); //mostrar 
+        	$("#F1_5").css('display','inline'); //mostrar
 
-        	// $("#F1_3").find('input').attr('required', true);
-         //   	$("#F1_4").find('input').attr('required', true); 	
+        	$("#F1_3").find('input').attr('required', true);
+         	$("#F1_4").find('input').attr('required', true);
+        	$("#F1_5").find('input').attr('required', true); 	
         }
 	});
 
@@ -490,15 +497,18 @@ $(document).ready(function(){
         if (this.checked && this.value == 'a') {
 
         	$("#F1_6").css('display','inline'); //mostrar 
-        	// $("#F1_6").find('input').attr('required', true);
+        	$("#F1_6").find('input').attr('required', true);
+
+        	$("#F1_7").find('input').removeAttr('required');
+        	$("#F1_8").find('input').removeAttr('required');
 
         	$("#F1_7").css('display','none');
 			$("#F1_8").css('display','none');
 
-		    $("#F1_7").find('input').removeAttr('required');
-        	$("#F1_8").find('input').removeAttr('required');
+		   
 
         }else{
+
         	$("#F1_6").css('display','none'); //ocultar
 
         	$("#F1_6").find('input').removeAttr('required');
@@ -506,26 +516,36 @@ $(document).ready(function(){
         	$("#F1_7").css('display','inline'); //mostrar 
         	$("#F1_8").css('display','inline'); //mostrar 
 
-        	// $("#F1_7").find('input').attr('required', true);
-        	// $("#F1_8").find('input').attr('required', true);
+        	$("#F1_7").find('input').attr('required', true);
+        	$("#F1_8").find('input').attr('required', true);
         	
         }
 	});
 
 
-	// $('input:radio[name="F1_1"]').change(function(){
- //        if (this.checked && this.value == 'a') {
- //        	$("#F2_1").css('display','inline'); //mostrar 
- //        	$("#F2_2").css('display','inline'); //mostrar
-	// 		$("#F2_3").css('display','inline'); //mostrar
+	$('input:radio[name="F1_1"]').change(function(){
+        if (this.checked && this.value == 'a') {
+        	
+        	$("#F2_1").css('display','inline'); //mostrar 
+        	$("#F2_2").css('display','inline'); //mostrar
+			$("#F2_3").css('display','inline'); //mostrar
+
+			$("#F2_1").find('input').attr('required', true);
+        	$("#F1_8").find('input').attr('required', true);
+
+        }else{
+
+        	$("#F2_1").find('input').removeAttr('required');
+        	$("#F2_2").find('input').removeAttr('required');
+        	$("#F2_3").find('input').removeAttr('required');
+
+        	$("#F2_1").css('display','none'); //ocultar
+        	$("#F2_2").css('display','none'); //ocultar
+        	$("#F2_3").css('display','none'); //ocultar  
 
 
- //        }else{
- //        	$("#F2_1").css('display','none'); //ocultar
- //        	$("#F2_2").css('display','none'); //ocultar
- //        	$("#F2_3").css('display','none'); //ocultar       	
- //        }
-	// });
+        }
+		});
 
 
 		$('input:radio[name="F2_1"]').change(function(){
@@ -554,14 +574,17 @@ $(document).ready(function(){
         if (this.checked && this.value == 'a') {
 
         	$("#F2_5").css('display','inline'); //mostrar 
-            // $("#F2_5").find('input').attr('required', true);
+            
+            $("#F2_5").find('input').attr('required', true);
 
        		
 
         }else{
 
+        	$("#F2_5").find('input').removeAttr('required');
+        	
         	$("#F2_5").css('display','none'); //ocultar
-		    $("#F2_5").find('input').removeAttr('required');
+		    
 
         	
               	
@@ -575,13 +598,16 @@ $(document).ready(function(){
 
         	$("#F2_7").css('display','inline'); //mostrar 
 
-            // $("#F2_7").find('input').attr('required', true);
+            $("#F2_7").find('input').attr('required', true);
      		
 
         }else{
 
+
+        	$("#F2_7").find('input').removeAttr('required');
+
         	$("#F2_7").css('display','none'); //oculta
-		    $("#F2_7").find('input').removeAttr('required');
+		   
               	
         }
 	});
@@ -591,13 +617,15 @@ $(document).ready(function(){
         if (this.checked && this.value == 'a') {
 
         	 
+        	$("#F2_8").find('input').removeAttr('required');
         	$("#F2_8").css('display','none'); //oculta       		
-		    $("#F2_8").find('input').removeAttr('required');
+		   
 
         }else{
 
         	$("#F2_8").css('display','inline'); //mostrar
-            // $("#F2_8").find('input').attr('required', true);
+           
+            $("#F2_8").find('input').attr('required', true);
 		 
               	
         }
@@ -616,24 +644,20 @@ $(document).ready(function(){
         	$("#F2_12").css('display','inline'); //mostrar
         	$("#F2_13").css('display','inline'); //mostrar
         	$("#F2_14").css('display','inline'); //mostrar
+			$("#F2_15").css('display','inline'); //mostrar	
 
-
-   	        // $("#F2_9").find('input').attr('required', true);
-            // $("#F2_10").find('input').attr('required', true);
-            // $("#F2_11").find('input').attr('required', true);
-            // $("#F2_12").find('input').attr('required', true);
-            // $("#F2_13").find('input').attr('required', true);
-            // $("#F2_14").find('input').attr('required', true);
+   	        $("#F2_9").find('input').attr('required', true);
+            $("#F2_10").find('input').attr('required', true);
+            $("#F2_11").find('input').attr('required', true);
+            $("#F2_12").find('input').attr('required', true);
+            $("#F2_13").find('input').attr('required', true);
+            $("#F2_14").find('input').attr('required', true);
+ 		 	$("#F2_15").find('input').attr('required', true);
  		
 
         }else{
 
-        	$("#F2_9").css('display','none'); //oculta 
-        	$("#F2_10").css('display','none'); //oculta
-        	$("#F2_11").css('display','none'); //oculta
-        	$("#F2_12").css('display','none'); //oculta
-        	$("#F2_13").css('display','none'); //oculta
-        	$("#F2_14").css('display','none'); //oculta  
+
 
 		    $("#F2_9").find('input').removeAttr('required');
 		    $("#F2_10").find('input').removeAttr('required');
@@ -641,6 +665,15 @@ $(document).ready(function(){
 		    $("#F2_12").find('input').removeAttr('required');
 		    $("#F2_13").find('input').removeAttr('required');
 		    $("#F2_14").find('input').removeAttr('required');
+  			$("#F2_15").find('input').removeAttr('required');
+
+        	$("#F2_9").css('display','none'); //oculta 
+        	$("#F2_10").css('display','none'); //oculta
+        	$("#F2_11").css('display','none'); //oculta
+        	$("#F2_12").css('display','none'); //oculta
+        	$("#F2_13").css('display','none'); //oculta
+        	$("#F2_14").css('display','none'); //oculta  
+			$("#F2_15").css('display','none'); //oculta 
 
 
         	
@@ -654,37 +687,39 @@ $(document).ready(function(){
 
         	 
         	$("#F2_16").css('display','inline'); //mostrar 
-        	$("#F2_17").css('display','inline'); //mostrar
+        	
+   	        $("#F2_16").find('input').attr('required', true);
+   	        $("#F2_16R1").attr('required', true);
+   	        $("#F2_16R2").attr('required', true);
+   	        $("#F2_16R3").attr('required', true);
+
+			$("#F2_17").css('display','inline'); //mostrar
         	$("#F2_18").css('display','inline'); //mostrar
 
-   	        // $("#F2_16").find('input').attr('required', true);
+   	        $("#F2_17").find('input').attr('required', true);
+   	        $("#F2_18").find('input').attr('required', true);
 
-   	        // $("#F2_16R1").attr('required', true);
-   	        // $("#F2_16R2").attr('required', true);
-   	        // $("#F2_16R3").attr('required', true);
-
-   	        // $("#F2_17").find('input').attr('required', true);
-   	        // $("#F2_18").find('input').attr('required', true);
-
-
-
-
-           		
+   		
 
         }else{
 
-        	$("#F2_16").css('display','none'); //oculta 
-        	$("#F2_17").css('display','none'); //oculta
-        	$("#F2_18").css('display','none'); //oculta
 
-		    $("#F2_16").find('input').removeAttr('required');
 		    $("#F2_16R1").removeAttr('required');
 		    $("#F2_16R2").removeAttr('required');
 		    $("#F2_16R3").removeAttr('required');
 
-		    $("#F2_17").find('input').removeAttr('required');
+        	$("#F2_16").css('display','none'); //oculta 
+        
+		    $("#F2_16").find('input').removeAttr('required');
+
+  			$("#F2_17").find('input').removeAttr('required');
 		    $("#F2_18").find('input').removeAttr('required');
 
+		    
+		    $("#F2_17").css('display','none'); //oculta
+        	$("#F2_18").css('display','none'); //oculta
+
+		  
          
               	
         }
@@ -702,37 +737,33 @@ $(document).ready(function(){
            	$("#F2_23").css('display','inline'); //mostrar 
 	        $("#F2_24").css('display','inline'); //mostrar 
 	        $("#F2_25").css('display','inline'); //mostrar 
-
-   	       //  $("#F2_20").find('input').attr('required', true);
-   	       //  $("#F2_21").find('input').attr('required', true);
-   	       //  $("#F2_22").find('input').attr('required', true);
-   	       //  $("#F2_23").find('input').attr('required', true);
+ 			$("#F2_26").css('display','inline'); //mostrar 
    	       
-   	       // $("#F2_23R1").attr('required', true);
-   	       // $("#F2_23R2").attr('required', true);
-   	       // $("#F2_23R3").attr('required', true);
+   	        $("#F2_20").find('input').attr('required', true);
+   	        $("#F2_21").find('input').attr('required', true);
+   	        $("#F2_22").find('input').attr('required', true);
+   	        $("#F2_23").find('input').attr('required', true);
+   	       
+   	       $("#F2_23R1").attr('required', true);
+   	       $("#F2_23R2").attr('required', true);
+   	       $("#F2_23R3").attr('required', true);
 
-   	       // $("#F2_24").find('input').attr('required', true);
-   	       // $("#F2_25").find('input').attr('required', true);
-   	       // $("#F2_25R6").attr('required', true);
-   	       // $("#F2_25R7").attr('required', true);
-   	       // $("#F2_25R8").attr('required', true);
+   	       $("#F2_24").find('input').attr('required', true);
+
+   	       $("#F2_25").find('input').attr('required', true);
+   	       $("#F2_25R6").attr('required', true);
+   	       $("#F2_25R7").attr('required', true);
+   	       $("#F2_25R8").attr('required', true);
 
 
 
         }else{
 
-        	$("#F2_20").css('display','none'); //oculta 
-        	$("#F2_21").css('display','none'); //oculta
-        	$("#F2_22").css('display','none'); //oculta
-        	$("#F2_23").css('display','none'); //oculta
-        	$("#F2_24").css('display','none'); //oculta
-        	$("#F2_25").css('display','none'); //oculta
-
-		    $("#F2_20").find('input').removeAttr('required');
+        	$("#F2_20").find('input').removeAttr('required');
 		    $("#F2_21").find('input').removeAttr('required');
 		    $("#F2_22").find('input').removeAttr('required');
 		    $("#F2_23").find('input').removeAttr('required');
+		    $("#F2_26").find('input').removeAttr('required');
 
 		    $("#F2_23R1").removeAttr('required');
 		    $("#F2_23R2").removeAttr('required');
@@ -743,6 +774,16 @@ $(document).ready(function(){
 		    $("#F2_25R6").removeAttr('required');
 		    $("#F2_25R7").removeAttr('required');
 		    $("#F2_25R8").removeAttr('required');
+
+
+        	$("#F2_20").css('display','none'); //oculta 
+        	$("#F2_21").css('display','none'); //oculta
+        	$("#F2_22").css('display','none'); //oculta
+        	$("#F2_23").css('display','none'); //oculta
+        	$("#F2_24").css('display','none'); //oculta
+        	$("#F2_25").css('display','none'); //oculta
+			$("#F2_26").css('display','none'); //oculta
+		   
 
          
               	
@@ -757,18 +798,23 @@ $(document).ready(function(){
 
         	 
         	$("#F2_27").css('display','inline'); //mostrar 
+   	        $("#F2_27").find('input').attr('required', true);
 
-   	        // $("#F2_27").find('input').attr('required', true);
+        	$("#F2_28").css('display','inline'); //mostrar 
+   	        $("#F2_28").find('input').attr('required', true);
 
-        	
 
         }else{
 
+        	$("#F2_27").find('input').removeAttr('required');
+           
         	$("#F2_27").css('display','none'); //oculta 
+		    
+            
+            $("#F2_28").find('input').removeAttr('required'); 
 
-		    $("#F2_27").find('input').removeAttr('required');
-              
-
+            $("#F2_28").css('display','none'); //oculta 
+		   
         }
 	});
 
@@ -781,12 +827,14 @@ $(document).ready(function(){
         	 
         	$("#F2_29").css('display','inline'); //mostrar 
         	
-   	        // $("#F2_29").find('input').attr('required', true);
+   	        $("#F2_29").find('input').attr('required', true);
 
         }else{
 
+        	$("#F2_29").find('input').removeAttr('required');
+
         	$("#F2_29").css('display','none'); //oculta 
-		    $("#F2_29").find('input').removeAttr('required');
+		    
               	
         }
 	});
@@ -796,15 +844,19 @@ $(document).ready(function(){
 		$('input:radio[name="F1_5"]').change(function(){
         if (this.checked && this.value == 'a') {
 
-        	 	
+        	$("#F3_1").find('input').removeAttr('required');
+		    $("#F3_2").find('input').removeAttr('required');
+		    $("#F3_3").find('input').removeAttr('required');	
+        	$("#F3_4").find('input').removeAttr('required');	
+
+
         	$("#F3_1").css('display','none'); //oculta 
         	$("#F3_2").css('display','none'); //oculta 	
         	$("#F3_3").css('display','none'); //oculta 	
+			$("#F3_4").css('display','none'); //oculta 	
 
 
-	        $("#F3_1").find('input').removeAttr('required');
-		    $("#F3_2").find('input').removeAttr('required');
-		    $("#F3_3").find('input').removeAttr('required');
+	        
 
 
         }else{
@@ -812,32 +864,34 @@ $(document).ready(function(){
 			$("#F3_1").css('display','inline'); //mostrar         
 			$("#F3_2").css('display','inline'); //mostrar         
 			$("#F3_3").css('display','inline'); //mostrar  
+			$("#F3_4").css('display','inline'); //mostrar  
 
-	        // $("#F3_1").find('input').attr('required', true);
-   	     //    $("#F3_2").find('input').attr('required', true);
-   	     //    $("#F3_3").find('input').attr('required', true);
-          	
+	        
+	        $("#F3_1").find('input').attr('required', true);
+   	        $("#F3_2").find('input').attr('required', true);
+   	        $("#F3_3").find('input').attr('required', true);
+          	$("#F3_4").find('input').attr('required', true);	
         }
 	});
 
 
 
 
-		$('input:radio[name="F1_5"]').change(function(){
-        if (this.checked && this.value == 'a') {
+	// 	$('input:radio[name="F1_5"]').change(function(){
+ //        if (this.checked && this.value == 'a') {
 
         	 	
-        	$("#F3_1R1").css('display','none'); //oculta 
-	        $("#F3_1R1").find('input').removeAttr('required');
+ //        	$("#F3_1R1").css('display','none'); //oculta 
+	//         $("#F3_1R1").find('input').removeAttr('required');
 
-        }else{
+ //        }else{
 
-			$("#F3_1R1").css('display','inline'); //mostrar         
-   	        // $("#F3_1R1").find('input').attr('required', true);
+	// 		$("#F3_1R1").css('display','inline'); //mostrar         
+ //   	        // $("#F3_1R1").find('input').attr('required', true);
 			    
               	
-        }
-	});
+ //        }
+	// });
 
 
 
@@ -862,21 +916,21 @@ $(document).ready(function(){
 
 
 
-		$('input:radio[name="F3_1"]').change(function(){
-        if (this.checked && this.value == 'a') {
+	// 	$('input:radio[name="F3_1"]').change(function(){
+ //        if (this.checked && this.value == 'a') {
 
 
-       		$("#F3_1R3").css('display','none'); //ocultar
-	        $("#F3_1R3").find('input').removeAttr('required');
+ //       		$("#F3_1R3").css('display','none'); //ocultar
+	//         $("#F3_1R3").find('input').removeAttr('required');
 
 
-        }else{
+ //        }else{
 
-        	$("#F3_1R3").css('display','inline'); //mostrar  
-	        // $("#F3_1R3").find('input').attr('required', true);
+ //        	$("#F3_1R3").css('display','inline'); //mostrar  
+	//         // $("#F3_1R3").find('input').attr('required', true);
 
-        }
-	});
+ //        }
+	// });
 
 
 
@@ -885,15 +939,16 @@ $(document).ready(function(){
 
 
         	$("#F3_5").css('display','inline'); //mostrar       	
-	        // $("#F3_5").find('input').attr('required', true);
+	        $("#F3_5").find('input').attr('required', true);
 
 
         }else{
 
-
+			$("#F3_5").find('input').removeAttr('required');
        		$("#F3_5").css('display','none'); //ocultar
-	        $("#F3_5").find('input').removeAttr('required');
-
+	       
+       		$("#F3_6").find('input').removeAttr('required');
+       		$("#F3_6").css('display','none'); //ocultar
         }
 	});
 
@@ -906,14 +961,14 @@ $(document).ready(function(){
 
         	$("#F3_7").css('display','inline'); //mostrar       	
 
-	        //$("#F3_7").find('input').attr('required', true);
+	        $("#F3_7").find('input').attr('required', true);
 
         }else{
 
+			$("#F3_7").find('input').removeAttr('required');
 
        		$("#F3_7").css('display','none'); //ocultar
-	        $("#F3_7").find('input').removeAttr('required');
-
+	        
         }
 	});
 
@@ -924,15 +979,15 @@ $(document).ready(function(){
         if (this.checked && this.value == 'a') {
 
       	
-
+ 		$("#F3_8").find('input').removeAttr('required');
        	$("#F3_8").css('display','none'); //ocultar
-	    $("#F3_8").find('input').removeAttr('required');
+	   
 
 
         }else{
 
-        $("#F3_8").css('display','inline'); //mostrar 
-	   // $("#F3_8").find('input').attr('required', true);
+       $("#F3_8").css('display','inline'); //mostrar 
+	   $("#F3_8").find('input').attr('required', true);
 
         }
 	});
@@ -953,22 +1008,29 @@ $(document).ready(function(){
 		$("#F3_11").css('display','inline'); //mostrar 
 		$("#F3_12").css('display','inline'); //mostrar 
 		$("#F3_13").css('display','inline'); //mostrar 
-		$("#F3_14").css('display','inline'); //mostrar 
+		$("#F3_14").css('display','inline'); //mostrar
+		$("#F3_15").css('display','inline'); //mostrar  
 
-	    // $("#F3_9").find('input').attr('required', true);
-	    // $("#F3_10").find('input').attr('required', true);
-	    // $("#F3_11").find('input').attr('required', true);
-	    // $("#F3_12").find('input').attr('required', true);
-	    // $("#F3_13").find('input').attr('required', true);
-	    // $("#F3_14").find('input').attr('required', true); 		
-
+	    $("#F3_9").find('input').attr('required', true);
+	    $("#F3_10").find('input').attr('required', true);
+	    $("#F3_11").find('input').attr('required', true);
+	    $("#F3_12").find('input').attr('required', true);
+	    $("#F3_13").find('input').attr('required', true);
+	    $("#F3_14").find('input').attr('required', true); 		
+ 		$("#F3_15").find('input').attr('required', true); 		
 
 
         }else{
 
     
 
-
+         $("#F3_9").find('input').removeAttr('required');
+	    $("#F3_10").find('input').removeAttr('required');
+	    $("#F3_11").find('input').removeAttr('required');
+	    $("#F3_12").find('input').removeAttr('required');
+	    $("#F3_13").find('input').removeAttr('required');
+	    $("#F3_14").find('input').removeAttr('required');
+ 		$("#F3_15").find('input').removeAttr('required');
 
 	     $("#F3_9").css('display','none'); //ocultar
  		 $("#F3_10").css('display','none'); ////ocultar 		  
@@ -976,15 +1038,11 @@ $(document).ready(function(){
 		 $("#F3_12").css('display','none'); ////ocultar
 		 $("#F3_13").css('display','none'); ////ocultar
 		 $("#F3_14").css('display','none'); ////ocultar 
+		 $("#F3_15").css('display','none'); ////ocultar 
 
 
 
-     //    $("#F3_9").find('input').removeAttr('required');
-	    // $("#F3_10").find('input').removeAttr('required');
-	    // $("#F3_11").find('input').removeAttr('required');
-	    // $("#F3_12").find('input').removeAttr('required');
-	    // $("#F3_13").find('input').removeAttr('required');
-	    // $("#F3_14").find('input').removeAttr('required');
+       
 
 
         }
@@ -1002,21 +1060,17 @@ $(document).ready(function(){
 		$("#F3_18").css('display','inline'); //mostrar 
 
 
-	 //    $("#F3_16").find('input').attr('required', true);
-		// $("#F3_16R1").attr('required', true);
-		// $("#F3_16R2").attr('required', true);
-		// $("#F3_16R3").attr('required', true);
+	    $("#F3_16").find('input').attr('required', true);
+		$("#F3_16R1").attr('required', true);
+		$("#F3_16R2").attr('required', true);
+		$("#F3_16R3").attr('required', true);
 
-	 //    $("#F3_17").find('input').attr('required', true);
-	 //    $("#F3_18").find('input').attr('required', true);
+	    $("#F3_17").find('input').attr('required', true);
+	    $("#F3_18").find('input').attr('required', true);
 
 
         }else{
 
-       
-		 $("#F3_16").css('display','none'); //ocultar 
- 		 $("#F3_17").css('display','none'); //ocultar  		  
-		 $("#F3_18").css('display','none'); //ocultar 
 
 		 $("#F3_16R1").removeAttr('required');
 		 $("#F3_16R2").removeAttr('required');
@@ -1026,6 +1080,12 @@ $(document).ready(function(){
         $("#F3_16").find('input').removeAttr('required');
         $("#F3_17").find('input').removeAttr('required');
         $("#F3_18").find('input').removeAttr('required');
+       
+		 $("#F3_16").css('display','none'); //ocultar 
+ 		 $("#F3_17").css('display','none'); //ocultar  		  
+		 $("#F3_18").css('display','none'); //ocultar 
+
+		
 
 
         }
@@ -1039,26 +1099,43 @@ $(document).ready(function(){
 		$("#F3_21").css('display','inline'); //mostrar 
 		$("#F3_22").css('display','inline'); //mostrar 
 		$("#F3_23").css('display','inline'); //mostrar
+ 		
  		$("#F3_24").css('display','inline'); //mostrar
  		$("#F3_25").css('display','inline'); //mostrar
+		$("#F3_26").css('display','inline'); //mostrar
 
-	    // $("#F3_20").find('input').attr('required', true);
-	    // $("#F3_21").find('input').attr('required', true);
-	    // $("#F3_22").find('input').attr('required', true);
-	    // $("#F3_23").find('input').attr('required', true);
-	    // $("#F3_23R1").attr('required', true);
-	    // $("#F3_23R2").attr('required', true);
-	    // $("#F3_23R3").attr('required', true);
+	    $("#F3_20").find('input').attr('required', true);
+	    $("#F3_21").find('input').attr('required', true);
+	    $("#F3_22").find('input').attr('required', true);
+	    $("#F3_23").find('input').attr('required', true);
+	    
+	    $("#F3_23R1").attr('required', true);
+	    $("#F3_23R2").attr('required', true);
+	    $("#F3_23R3").attr('required', true);
 
 
-	    // $("#F3_24").find('input').attr('required', true);
-	    // $("#F3_25").find('input').attr('required', true);
+	    $("#F3_24").find('input').attr('required', true);
+	    $("#F3_25").find('input').attr('required', true);
+		$("#F3_26").find('input').attr('required', true);
 
 
 
 
         }else{
 
+
+        $("#F3_20").find('input').removeAttr('required');
+        $("#F3_21").find('input').removeAttr('required');
+        $("#F3_22").find('input').removeAttr('required');
+      	$("#F3_23").find('input').removeAttr('required');
+      	
+      	$("#F3_23R1").removeAttr('required');
+      	$("#F3_23R2").removeAttr('required');
+      	$("#F3_23R3").removeAttr('required');
+
+        $("#F3_24").find('input').removeAttr('required');
+        $("#F3_25").find('input').removeAttr('required');
+	    $("#F3_26").find('input').removeAttr('required');
        
 		 $("#F3_20").css('display','none'); //ocultar 
  		 $("#F3_21").css('display','none'); //ocultar  		  
@@ -1066,21 +1143,10 @@ $(document).ready(function(){
 		 $("#F3_23").css('display','none'); //ocultar
 		 $("#F3_24").css('display','none'); //ocultar 
 		 $("#F3_25").css('display','none'); //ocultar 
+ 		 $("#F3_26").css('display','none'); //ocultar 
 
 
-        $("#F3_20").find('input').removeAttr('required');
-        $("#F3_21").find('input').removeAttr('required');
-        $("#F3_22").find('input').removeAttr('required');
-      	$("#F3_23").find('input').removeAttr('required');
-      	$("#F3_23R1").removeAttr('required');
-      	$("#F3_23R2").removeAttr('required');
-      	$("#F3_23R3").removeAttr('required');
-
-        $("#F3_24").find('input').removeAttr('required');
-        $("#F3_25").find('input').removeAttr('required');
-
-
-
+  
 
         }
 	});
@@ -1089,75 +1155,75 @@ $(document).ready(function(){
 
 
 
-		$('input:radio[name="F3_15"]').change(function(){
-        if (this.checked && this.value == 'a') {
+	// 	$('input:radio[name="F3_15"]').change(function(){
+ //        if (this.checked && this.value == 'a') {
 
       	
- 		$("#F3_16").css('display','inline'); //mostrar
-		$("#F3_17").css('display','inline'); //mostrar 
-		$("#F3_18").css('display','inline'); //mostrar 
+ // 		$("#F3_16").css('display','inline'); //mostrar
+	// 	$("#F3_17").css('display','inline'); //mostrar 
+	// 	$("#F3_18").css('display','inline'); //mostrar 
 
-	    // $("#F3_16").find('input').attr('required', true);
-	    // $("#F3_17").find('input').attr('required', true);
-	    // $("#F3_18").find('input').attr('required', true);
+	//     // $("#F3_16").find('input').attr('required', true);
+	//     // $("#F3_17").find('input').attr('required', true);
+	//     // $("#F3_18").find('input').attr('required', true);
 
 
-        }else{
+ //        }else{
 
        
-		 $("#F3_16").css('display','none'); //ocultar 
- 		 $("#F3_17").css('display','none'); //ocultar  		  
-		 $("#F3_18").css('display','none'); //ocultar 
+	// 	 $("#F3_16").css('display','none'); //ocultar 
+ // 		 $("#F3_17").css('display','none'); //ocultar  		  
+	// 	 $("#F3_18").css('display','none'); //ocultar 
 
-        $("#F3_16").find('input').removeAttr('required');
-        $("#F3_17").find('input').removeAttr('required');
-        $("#F3_18").find('input').removeAttr('required');
+ //        $("#F3_16").find('input').removeAttr('required');
+ //        $("#F3_17").find('input').removeAttr('required');
+ //        $("#F3_18").find('input').removeAttr('required');
 
-        }
-	});
+ //        }
+	// });
 
 
 
-		$('input:radio[name="F3_19"]').change(function(){
-        if (this.checked && this.value == 'a') {
+	// 	$('input:radio[name="F3_19"]').change(function(){
+ //        if (this.checked && this.value == 'a') {
 
       	
- 		$("#F3_20").css('display','inline'); //mostrar
-		$("#F3_21").css('display','inline'); //mostrar 
-		$("#F3_22").css('display','inline'); //mostrar 
-		$("#F3_23").css('display','inline'); //mostrar
- 		$("#F3_24").css('display','inline'); //mostrar
- 		$("#F3_25").css('display','inline'); //mostrar
+ // 		$("#F3_20").css('display','inline'); //mostrar
+	// 	$("#F3_21").css('display','inline'); //mostrar 
+	// 	$("#F3_22").css('display','inline'); //mostrar 
+	// 	$("#F3_23").css('display','inline'); //mostrar
+ // 		$("#F3_24").css('display','inline'); //mostrar
+ // 		$("#F3_25").css('display','inline'); //mostrar
 
-	    // $("#F3_20").find('input').attr('required', true);
-	    // $("#F3_21").find('input').attr('required', true);
-	    // $("#F3_22").find('input').attr('required', true);
-	    // $("#F3_23").find('input').attr('required', true);
-	    // $("#F3_24").find('input').attr('required', true);
-	    // $("#F3_25").find('input').attr('required', true);
+	//     // $("#F3_20").find('input').attr('required', true);
+	//     // $("#F3_21").find('input').attr('required', true);
+	//     // $("#F3_22").find('input').attr('required', true);
+	//     // $("#F3_23").find('input').attr('required', true);
+	//     // $("#F3_24").find('input').attr('required', true);
+	//     // $("#F3_25").find('input').attr('required', true);
 
 
 
-        }else{
+ //        }else{
 
        
-		 $("#F3_20").css('display','none'); //ocultar 
- 		 $("#F3_21").css('display','none'); //ocultar  		  
-		 $("#F3_22").css('display','none'); //ocultar 
-		 $("#F3_23").css('display','none'); //ocultar 
-		 $("#F3_24").css('display','none'); //ocultar 
-		 $("#F3_25").css('display','none'); //ocultar 
+	// 	 $("#F3_20").css('display','none'); //ocultar 
+ // 		 $("#F3_21").css('display','none'); //ocultar  		  
+	// 	 $("#F3_22").css('display','none'); //ocultar 
+	// 	 $("#F3_23").css('display','none'); //ocultar 
+	// 	 $("#F3_24").css('display','none'); //ocultar 
+	// 	 $("#F3_25").css('display','none'); //ocultar 
 
-        $("#F3_20").find('input').removeAttr('required');
-        $("#F3_21").find('input').removeAttr('required');
-        $("#F3_22").find('input').removeAttr('required');
-        $("#F3_23").find('input').removeAttr('required');
-        $("#F3_24").find('input').removeAttr('required');
-        $("#F3_25").find('input').removeAttr('required');
+ //        $("#F3_20").find('input').removeAttr('required');
+ //        $("#F3_21").find('input').removeAttr('required');
+ //        $("#F3_22").find('input').removeAttr('required');
+ //        $("#F3_23").find('input').removeAttr('required');
+ //        $("#F3_24").find('input').removeAttr('required');
+ //        $("#F3_25").find('input').removeAttr('required');
 
 
-        }
-	});
+ //        }
+	// });
 
 
 
@@ -1168,14 +1234,20 @@ $(document).ready(function(){
 
       	
  		$("#F3_27").css('display','inline'); //mostrar
+	    $("#F3_27").find('input').attr('required', true);
 
-	    //$("#F3_27").find('input').attr('required', true);
+		$("#F3_28").css('display','inline'); //mostrar
+	    $("#F3_28").find('input').attr('required', true);
 
         }else{
-       
-		$("#F3_27").css('display','none'); //ocultar
 
         $("#F3_27").find('input').removeAttr('required');
+		$("#F3_27").css('display','none'); //ocultar
+
+		$("#F3_28").find('input').removeAttr('required');
+		$("#F3_28").css('display','none'); //ocultar
+
+       
 
         }
 	});
@@ -1187,12 +1259,13 @@ $(document).ready(function(){
 
       	
  		$("#F3_29").css('display','inline'); //mostrar
-	    //$("#F3_29").find('input').attr('required', true);
+	    $("#F3_29").find('input').attr('required', true);
 
         }else{
-       
-		$("#F3_29").css('display','none'); //ocultar 
+
         $("#F3_29").find('input').removeAttr('required');
+		$("#F3_29").css('display','none'); //ocultar 
+       
 
         }
 	});
@@ -1204,49 +1277,51 @@ $(document).ready(function(){
 
       	
  		$("#F5_5").css('display','inline'); //mostrar
-	    //$("#F5_5").find('input').attr('required', true);
+	    $("#F5_5").find('input').attr('required', true);
 
         }else{
-       
-		 $("#F5_5").css('display','none'); //ocultar 
 
         $("#F5_5").find('input').removeAttr('required');
+       
+		$("#F5_5").css('display','none'); //ocultar 
 
-
+      
         }
 	});
 
 
 
-			$('input:radio[name="F6_1"]').change(function(){
-        if (this.checked && this.value == 'a') {
+		$('input:radio[name="F6_1"]').change(function(){
+        	if (this.checked && this.value == 'a') {
 
       	
  		$("#F6_2").css('display','inline'); //mostrar
-	   //$("#F6_2").find('input').attr('required', true);
+	    $("#F6_2").find('input').attr('required', true);
 
         }else{
-       
-		 $("#F6_2").css('display','none'); //ocultar 
+
         $("#F6_2").find('input').removeAttr('required');
+       
+		$("#F6_2").css('display','none'); //ocultar 
+       
 
         }
 	});
 
 
 
-			$('input:radio[name="F9_1"]').change(function(){
-        if (this.checked && this.value == 'a') {
+		$('input:radio[name="F9_1"]').change(function(){       
+        	if (this.checked && this.value == 'a') {
 
       	
  		$("#F9_3").css('display','inline'); //mostrar
-	    //$("#F9_3").find('input').attr('required', true);
+	    $("#F9_3").find('input').attr('required', true);
 
         }else{
-       
-		 $("#F9_3").css('display','none'); //ocultar 
-        $("#F9_3").find('input').removeAttr('required');
 
+        $("#F9_3").find('input').removeAttr('required');    
+		$("#F9_3").css('display','none'); //ocultar 
+        
         }
 	});
 
@@ -1261,21 +1336,23 @@ $(document).ready(function(){
  		$("#F10_3").css('display','inline'); //mostrar
  		$("#F10_4").css('display','inline'); //mostrar
 
-	    // $("#F10_2").find('input').attr('required', true);
-	    // $("#F10_3").find('input').attr('required', true);
-	    // $("#F10_4").find('input').attr('required', true);
+	    $("#F10_2").find('input').attr('required', true);
+	    $("#F10_3").find('input').attr('required', true);
+	    $("#F10_4").find('input').attr('required', true);
 
 
         }else{
        
+
+       	 $("#F10_2").find('input').removeAttr('required');
+       	 $("#F10_3").find('input').removeAttr('required');
+       	 $("#F10_4").find('input').removeAttr('required');
+
 		 $("#F10_2").css('display','none'); //ocultar 
 		 $("#F10_3").css('display','none'); //ocultar 
 		 $("#F10_4").css('display','none'); //ocultar 
 
-        $("#F10_2").find('input').removeAttr('required');
-        $("#F10_3").find('input').removeAttr('required');
-        $("#F10_4").find('input').removeAttr('required');
-
+       
 
         }
 	});
@@ -1314,21 +1391,22 @@ $(document).ready(function(){
         if (this.checked && this.value != 'otro') {
 
 			$("#F11_2Tabla").css('display','inline'); //mostrar
+	   		$("#F11_2Tabla").find('input').attr('required', true);
 
-
-	    //$("#F11_2Tabla").find('input').attr('required', true);
-
-	    $("#F10_2Otro").css('display','none');
-        $("#F10_2Otro").find('input').removeAttr('required');
+	   
+	   		 $("#F10_2Otro").css('display','none');
+       		 $("#F10_2Otro").find('input').removeAttr('required');
 			
 
         }else{
 
 		$("#F10_2Otro").css('display','inline'); //mostrar
-	   // $("#F10_2Otro").find('input').attr('required', true);
+	   	$("#F10_2Otro").find('input').attr('required', true);
+
+		$("#F11_2Tabla").find('input').removeAttr('required');
 
 		$("#F11_2Tabla").css('display','none'); //ocultar
-        $("#F11_2Tabla").find('input').removeAttr('required');
+      
 			
         }
 	});
@@ -1343,16 +1421,18 @@ $(document).ready(function(){
  		$("#F20_5T").css('display','inline'); //mostrar
  		$("#F20_6T").css('display','inline'); //mostrar
 
-	    //$("#F20_5T").find('input').attr('required', true);
-	    //$("#F20_6T").find('input').attr('required', true);
+	    $("#F20_5T").find('input').attr('required', true);
+	    $("#F20_6T").find('input').attr('required', true);
 
         }else{
-       
-		 $("#F20_5T").css('display','none'); //ocultar 
-		 $("#F20_6T").css('display','none'); //ocultar 
 
         $("#F20_5T").find('input').removeAttr('required');
         $("#F20_6T").find('input').removeAttr('required');
+       
+		$("#F20_5T").css('display','none'); //ocultar 
+		$("#F20_6T").css('display','none'); //ocultar 
+
+        
 
         }
 	});
