@@ -7,14 +7,14 @@ console.log('contrato');
 
 
 	var html='';
-
-	html+='<p><b>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p></b>';
-
+	html+='<b>'
+	html+='<p>CONTRATO DE COMISIÓN QUE CELEBRA POR UNA PARTE</p>';
+	html+='/b'
 	//fase1
-
+	html+='<b>'
 	if(($('input:radio[name=F1_1]:checked').val())== 'a'){	
 		html+=(' '+$("#F1_2R1").val()+' '+$("#F1_2R2").val()+',').toUpperCase();
-		html+= '<b>POR SU PROPIO DERECHO,</b>';
+		html+= 'POR SU PROPIO DERECHO,';
 	}else{
 		
 		html+=(''+$("F1_3R1").val()+',').toUpperCase();
@@ -23,11 +23,11 @@ console.log('contrato');
 
 	}
 
-	html+= '<b>A QUIEN EN LO SUCESIVO SE DENOMINARÁ "EL COMITENTE" Y POR LA OTRA,</b>';
-    html+=''
+	html+= 'A QUIEN EN LO SUCESIVO SE DENOMINARÁ "EL COMITENTE" Y POR LA OTRA,';
+    html+='</b>'
 
 	//fin fase 1 
-
+html+='<b>'
 	
 	if(($('input:radio[name=F1_1]:checked').val())== 'a'){	
 		html+=(' '+$("#F1_6R1").val()+' '+$("#F1_6R2").val()+',').toUpperCase();
@@ -37,12 +37,11 @@ console.log('contrato');
 		html+=(''+$("F1_7R1").val()+',');
 		html+= 'REPRESENTADA EN ESTE ACTO POR,';
 		html+=(' '+$("#F1_8R1").val()+''+$("#F1_8R2").val()+'').toUpperCase();
-		html+= 'A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ "ELCOMISIONISTA" Y A QUIENES EN CONJUNTO SE LES DENOMINARÁ "LAS PARTES" AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS.</p>';
+		html+= '<p> A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ "ELCOMISIONISTA" Y A QUIENES EN CONJUNTO SE LES DENOMINARÁ "LAS PARTES" AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS.</p>';
 
 	
 	}
-
-
+	html+='</b>'
 	// //fase 2
 
 	html+='<div style="text-align: center;">';
