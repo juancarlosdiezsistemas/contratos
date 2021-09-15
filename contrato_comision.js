@@ -1257,11 +1257,9 @@ if ($('input:radio[name=F5_1]:checked').val()=='a') {
 
 		html2+='<p>';
 		html2+='<b>';
-
 		html2+=' DÉCIMA SEGUNDA. NOTIFICACIONES.- "LAS PARTES" ';
-		html2+=' acuerdan que las notificaciones, requerimientos, peticiones y otras comunicaciones que deban de efectuarse en relación con el presente Contrato, se realizarán por escrito y se entenderán que son válidas cuando: ';
 		html2+='</b>';		
-		
+		html2+=' acuerdan que las notificaciones, requerimientos, peticiones y otras comunicaciones que deban de efectuarse en relación con el presente Contrato, se realizarán por escrito y se entenderán que son válidas cuando: ';
 		html2+='</p>';
 
 
