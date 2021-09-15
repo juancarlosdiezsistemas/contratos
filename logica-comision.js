@@ -417,6 +417,7 @@ $(document).ready(function(){
 	// pregunta f9_1
 
 	$("#F9_3").css('display','none');
+	$("#F9_3R6").css('display','none');
 
 	// // pregunta f10_1 
 
@@ -1437,6 +1438,21 @@ $(document).ready(function(){
         }
 	});
 
+
+	$('input:radio[name="F9_3"]').change(
+    function(){
+        if (this.checked && this.value != 'otro') {
+
+			$("#F9_3R6").css('display','inline'); //mostrar
+			$("#F9_3R6").find('input').attr('required', true);
+
+        }else{
+
+			$("#F9_3R6").find('input').removeAttr('required');
+      		$("#F9_3R6").css('display','none'); //ocultar 
+			
+        }
+	});
 
 
 			
