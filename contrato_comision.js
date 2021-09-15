@@ -304,7 +304,7 @@ $("#btnGenerar").click(function(){
 
 	html+='<p>'
 	html+= ' B) Que se identifica con: ';
-	html+=$('input:radio[name=F3_2]:checked').val().toLowerCase();
+	html+=$('input:radio[name=F3_2]:checked').val();
 	html+= ' documento que se anexa en copia simple al presente Contrato. ';
 	html+='</p>'
 
@@ -693,13 +693,13 @@ html+='<p>'
 
 
         if ($("#F5_3R3").val()=='M.N.') {
-			html+=NumeroALetrasMX($("#F5_3R4").val()).toUpperCase()+' ';
+			html+=NumeroALetrasMX($("#F5_3R2").val()).toUpperCase()+' ';
 		}else{
-			html+=NumeroALetrasUSD($("#F5_3R4").val()).toUpperCase()+' ';
+			html+=NumeroALetrasUSD($("#F5_3R2").val()).toUpperCase()+' ';
 		}
 
-		if($("#F5_3R5").val().indexOf('.') != -1){
-			html+=$("#F5_3R5").val().split('.')[1]+'/100 ';
+		if($("#F5_3R2").val().indexOf('.') != -1){
+			html+=$("#F5_3R2").val().split('.')[1]+'/100 ';
 		}else{
 			html+='00/100 ';
 		}
@@ -708,7 +708,9 @@ html+='<p>'
 		html2+= $("#F5_3R3").val();
 		html2+=') ';
 		html2+='</td>';
+		html2+='<td align="center">';
 		html2+=moment($("#F5_3R4").val()).lang("es").format('LL');;
+		html2+='</td>';
 		html2+='<td align="center">'+$("#F5_3R5").val()+'</td>';
 		html2+='</tr>';
 		html2+='</table>';
@@ -750,7 +752,7 @@ if ($('input:radio[name=F5_1]:checked').val()=='a') {
 	html2+=' "EL COMISIONISTA" ';
 	html2+=' un interés moratorio a razón del ';
 //checar porcentaje
-	html2+=($("#F6_2R1").val()).toLowerCase();
+	html2+=($("#F6_2R1").val());
     html2+=' %';
     html2+=' por ciento mensual sobre saldos insolutos, desde que dicha cantidad debió ser cubierta y hasta el pago total de esta. ';
 
