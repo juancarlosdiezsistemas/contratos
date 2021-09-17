@@ -416,8 +416,8 @@ $(document).ready(function(){
 
 	// pregunta f9_1
 
+	$("#F9_3R6").css('display','none'
 	$("#F9_3").css('display','none');
-	$("#F9_3R6").css('display','none');
 
 	// // pregunta f10_1 
 
@@ -471,6 +471,12 @@ $(document).ready(function(){
 
 
         }else{
+
+        	$("#F1_2").find('input').removeAttr('required');
+        	$("#F2_1").find('input').removeAttr('required');
+        	$("#F2_2").find('input').removeAttr('required');
+        	$("#F2_3").find('input').removeAttr('required');
+
         	$("#F1_2").css('display','none'); //ocultar
         	$("#F2_1").css('display','none'); //ocultar
         	$("#F2_2").css('display','none'); //ocultar
@@ -552,15 +558,15 @@ $(document).ready(function(){
 		$('input:radio[name="F2_1"]').change(function(){
         if (this.checked && this.value == 'a') {
 
-
+			$("#F2_1R1").find('input').removeAttr('required');
        		$("#F2_1R1").css('display','none'); //ocultar
-		    $("#F2_1R1").find('input').removeAttr('required');
+		    
 
 
         }else{
 
         	$("#F2_1R1").css('display','inline'); //mostrar   
-            // $("#F2_1R1").find('input').attr('required', true);
+            $("#F2_1R1").find('input').attr('required', true);
     	
         }
 	});
