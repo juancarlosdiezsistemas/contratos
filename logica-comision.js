@@ -416,7 +416,7 @@ $(document).ready(function(){
 
 	// pregunta f9_1
 
-	$("#F9_3R6").css('display','none'
+	$("#F9_3R6").css('display','none');
 	$("#F9_3").css('display','none');
 
 	// // pregunta f10_1 
